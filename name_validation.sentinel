@@ -1,0 +1,10 @@
+import "tfplan/v2" as tfplan
+imoprt "strings"
+
+name_compliance = rule {
+    all tfplan.random_id as *, ids {
+        all ids as _, i {
+            strings.has_prefix(i,"server-")
+        }
+    }
+}
