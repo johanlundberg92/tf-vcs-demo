@@ -6,13 +6,13 @@ resource "random_id" "server1" {
     keepers = {
         name = local.time_string
     }
-    byte_length = 12
+    byte_length = 18
 }
 resource "random_id" "server2" {
     keepers = {
         name = local.time_string
     }
-    byte_length = 12
+    byte_length = 18
     prefix = "server-"
 }
 resource "terraform_data" "nothing" {
